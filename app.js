@@ -30,4 +30,35 @@
  * Date: new date()
  */
 
-console.log
+// var, let, const
+
+var age = 35;
+age = 25;
+console.log(age);
+
+let myname = 'WebMan';
+console.log(myname);
+myname = 'RuWebMan';
+console.log(myname);
+
+let $myName = 'Gerbert';
+let _myName = 'Gerbertusha';
+// let 1myName = 'Tolya' - SyntaxError
+console.log($myName, _myName);
+
+const firsName = 'Anatol';
+// firsName = 'Tolya' - Error
+const user = {
+    name: 'Hercules',
+    age: 8000
+};
+console.log(user)
+
+user.name = 'Heric'
+user.age = 15000
+console.log(user)
+
+
+
+
+
