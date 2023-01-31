@@ -346,15 +346,21 @@ console.log(value); // hi a'm webman
 value = string.toUpperCase() // вернуть строку в верхнем регистре
 console.log(value); // HI A M WEBMAN
 
+// Tamplate String. Операции с шаблонами.
 
+document.body.innerHTML = string; // шаблон, который выведет содержимое str в виде списка.
 
-
-
-
-
-
-
-
+str = `
+<ul>
+    <li>First name: ${someName1} </li>
+    <li>Last name: ${someName2} </li>
+    <li>Age: ${age} </li>
+    <li>Math.random: ${Math.random()} </li>
+    <li>5 + 5: ${5 + 5} </li>
+</ul>
+`;
+document.body.innerHTML = string;
+console.log(str); 
 
 
 
