@@ -1,4 +1,4 @@
-// Это однострочный комментарий
+// Это однострочный комментарий.
 
 /* Это 
 многострочный
@@ -6,13 +6,13 @@
 
 /**
  * 
- * Это JSDoc комментарий
+ * Это JSDoc комментарий.
  * 
  */
 
 /**
  * Типы данных:
- * 1. Примитивные
+ * 1. Примитивные.
  * - Number: 2023, 1.5, Nan, Infinity
  * - String: "Hello", 'Hello', `Hello`
  * - Boolean: true, false
@@ -30,7 +30,7 @@
  * Date: new date()
  */
 
-// var, let, const
+// var, let, const.
 
 var age = 35;
 age = 25;
@@ -58,11 +58,11 @@ user.name = 'Heric';
 user.age = 15000;
 console.log(user);
 
-// Преобразование типов
+// Преобразование типов.
 
 let value;
 
-// Number to String
+// Number to String.
 
 value = String(10); // String - функция
 console.log(value); // 10
@@ -75,7 +75,7 @@ console.log(typeof value); // string
 value = (40).toString(); // .toString - метод
 console.log(typeof value); // String
 
-// Boolean to String
+// Boolean to String.
 
 value = String(true);
 console.log(value); // true
@@ -85,31 +85,31 @@ value = String(false);
 console.log(value); // false
 console.log(typeof value); // string
 
-// Array to String
+// Array to String.
 
 value = String([1, 2, 3]);
 console.log(value); // 1, 2, 3
 console.log(typeof value); // string
 
-// Object to String
+// Object to String.
 
 value = String({myname: 'WebMan'}); 
 console.log(value); // [Object Object]
 console.log(typeof value); // String
 
-// Date to String
+// Date to String.
 
 value = String(new Date()); 
 console.log(value); // Mon Jan 30 2023 13:02:46 GMT+0300 (Москва, стандартное время)
 console.log(typeof value); // string
 
-// Symbol to String
+// Symbol to String.
 
 value = String(Symbol()); 
 console.log(value); // Symbol()
 console.log(typeof value); // String
 
-// Function to String
+// Function to String.
 
 value = String(function foo() {});
 console.log(value); // function foo() {}
@@ -155,7 +155,7 @@ value = 30 + null;
 console.log(value); // 30
 console.log(typeof value); // number
 
-// String to Number
+// String to Number.
 
 value = Number('10');
 console.log(value); // 10
@@ -201,8 +201,7 @@ value = Number([1, 2, 3]);
 console.log(value); // NaN
 console.log(typeof value); // number    
 
-// parseInt & parseFloat
-
+// parseInt & parseFloat.
 value = parseInt('10');
 console.log(value); // 10
 console.log(typeof value); // number
@@ -219,7 +218,7 @@ value = parseFloat('10.5');
 console.log(value); // 10.5
 console.log(typeof value); // number
 
-// Boolean 
+// Boolean.
 
 value = Boolean(''); // true
 value = Boolean('text'); // true
@@ -241,7 +240,7 @@ value = Boolean(Symbol());
 console.log(value); // true
 console.log(typeof value); // boolean
 
-// Числа
+// Числа.
 
 const a = 10;
 const b = 20;
@@ -262,7 +261,7 @@ console.log(value); // 2
 --value // уменьшаем value на 1, уменьшение произойдет сразу на этой строке
 console.log(value); // 1
 
-// Неточные вычисления
+// Неточные вычисления.
 
 value = 0.6 + 0.7;
 console.log(value); // 1.2999999999999998
@@ -288,6 +287,75 @@ console.log(value); // рандомное число от 1 до 10
 const arr = ['pink', 'blue', 'green'];
 value = Math.floor(Math.random() * arr.length); // 
 console.log(value, arr[value]); // будет возвращать рандомное значение из массива arr
+
+//String. Операции со строчными элементами.
+
+const someName1 = 'Web';
+const someName2 = 'Man';
+const someage = 30
+const string = "Hi, a'm WebMan"
+
+value = someName1 + someName2; //конкатенация = WebMan
+value = someName1.concat(someName2, ' ' ,someage); //конкатенация
+console.log(value); // WebMan 30
+
+value += someName1 + someName2; // 
+console.log(value); // WebMan 30WebMan
+
+value = someName1 + ' ' + someName2;
+console.log(value); // Web Man
+
+value = someName1.length
+console.log(value); // 3
+
+value = someName1[2]
+console.log(value); // b
+
+value = someName1 + someName2;
+value = someName1[someName1.length - 1]
+console.log(value); // b
+
+value = someName1 + someName2;
+value = value[value.length - 1]
+console.log(value); // n
+
+value = string.indexOf('M',0); // поиск первого упоминания символа "М", начать поиск c индекса 0
+console.log(value); // 11
+
+value = string.includes('Hi')
+console.log(value); // true
+
+value = string.slice(0,2) // вырезать из строки с индекса 0 до 2
+console.log(value); // Hi
+
+value = string.replace('Hi', 'Hello') // заменить одно значение на указанное 
+console.log(value); // Hello, a'm WebMan
+
+value = string.split(' ') // разделить строку по пробелам
+console.log(value); // ['Hi', 'a','m', 'WebMan']
+
+value = string.split('') // разделить строку по символам
+console.log(value); // ['H', 'i', 'l', 'l', 'o','', 'a','m', 'w', 'o', 'r', 'l', 'd']
+
+value = string.trim() // убрать пробелы
+console.log(value); // Hi a'm WebMan
+
+value = string.toLowerCase() // вернуть строку в нижнем регистре
+console.log(value); // hi a'm webman
+
+value = string.toUpperCase() // вернуть строку в верхнем регистре
+console.log(value); // HI A M WEBMAN
+
+
+
+
+
+
+
+
+
+
+
 
 
 
