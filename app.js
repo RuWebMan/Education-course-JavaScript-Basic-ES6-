@@ -362,6 +362,62 @@ str = `
 document.body.innerHTML = string;
 console.log(str); 
 
+// Объкты в JS.
+
+const newuser = {
+    firstName: 'John',
+    lastName: 'Ivanov',
+    age: 30,
+    isAdmin: true,
+    email: 'kenaa@example.com',
+    'user-address': {
+        street: 'Lenina',
+        city: 'Moscow',
+        country: 'Russia'  
+    },
+    skils: ['HTML', 'CSS', 'JavaScript']    
+};
+
+ value = newuser.firstName;
+ console.log(value); // John
+
+ value = newuser['lastName'];
+ console.log(value); // Ivanov
+
+ value = newuser['user-address']['street'];
+ console.log(value); // Lenina  
+
+ let prop = 'skils';
+ value = newuser[prop];
+ console.log(value);// ['HTML', 'CSS', 'JavaScript']
+
+ value = newuser[prop][0];
+ console.log(value); // HTML
+
+ newuser.age = 40; // обновляем значение age
+ value = newuser.age;
+ console.log(value); // 40
+ console.log(newuser); // { firstName: 'John', lastName: 'Ivanov', age: 40, isAdmin: true, email: 'kenaa@example.com', 'user-address': { street: 'Lenina', city: 'Moscow', country: 'Russia' }, skils: ['HTML', 'CSS', 'JavaScript'] }
+
+ delete newuser.age; // удаляем значение age
+ console.log(newuser); // { firstName: 'John', lastName: 'Ivanov', isAdmin: true, email: 'kenaa@example.com', 'user-address': { street: 'Lenina', city: 'Moscow', country: 'Russia' }, skils: ['HTML', 'CSS', 'JavaScript'] }
+
+ newuser.info = 'Some info'; // добавляем значение info
+ console.log(newuser); //
+
+ newuser['user-address'].city = 'Krasnogorsk'; // меняем значение city на 'Krasnogorsk'
+ console.log(newuser); // 
+
+ newuser.plan = {};
+ newuser.plan.basic = true;
+ console.log(newuser); // { firstName: 'John', lastName: 'Ivanov', age: 40, isAdmin: true, email: 'kenaa@example.com', 'user-address': { street: 'Lenina', city: 'Moscow', country: 'Russia' }, skils: ['HTML', 'CSS', 'JavaScript'], plan: { basic: true } }
+
+
+
+
+
+
+
 
 
 
